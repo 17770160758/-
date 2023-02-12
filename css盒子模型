@@ -1,0 +1,136 @@
+<style>
+        /* div{
+            width: 200px;
+            height: 200px;
+            background-color: pink; */
+            /* 边框线 */
+            /* border: 1px solid #000; */
+            /* 内边距 */
+            /* padding: 20px; */
+            /* 外边距 */
+            /* margin: 50px;
+        } */
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* solid:实线 */
+            /* border: 1px solid #000; */
+            /* dashed:虚线 */
+            /* border: 1px dashed #000; */
+            /* dotted:点线 */
+            /* border: 1px dotted #000; */
+            border-top: 1px solid #000;
+        }
+         .one{
+            /*四值： 按上 右 下 左取值 */
+            /* padding: 10px 20px 30px 40px; */
+            /* 三值：上 右左 下 */
+            /* padding: 10px 40px 80px; */
+            /* 两值：上下 左右 */
+            padding: 10px 80px;
+            /* 变成css3盒子模型，不需要手动去算盒子大小 */
+            box-sizing: border-box;
+        }
+    </style>
+     <script>
+        /*
+            1.盒子的概念
+             .页面中的每一个标签，都可以看做是一个“盒子”，通过盒子的视角更方便的进行布局
+             .浏览器在渲染（显示）网页时，会将网页中的元素看作是一个个的矩形区域，我们也形象的称之为盒子
+            2.盒子模型
+             .css中规定每个盒子分别由:content(内容区域)、padding（内边距区域）、border（边框区域）、margin（外边距区域）构成
+            3.content(内容区域) 利用width和height来设置  数字+px
+            4.border（边框区域） 快捷键 bd+tab 
+             .单方向设置：属性名：border-方位名词（left、right、bottom、top等）
+             .border-width (边框粗细)数字+px
+             .border-style (边框样式)实线solid、虚线dashed、点线dotted
+             .border-color (边框颜色)颜色取值
+            5.padding（内边距区域） 属性可以当作复合值属性使用，表示单独设置某个方向的内边距（最多取四个）
+            6.margin（外边距区域） 
+            7.清楚默认的内外边距 标签：margin和padding
+            8.外边距折叠现象-合并现象  解决方法：只给其中一个盒子设置margin
+        */ 
+    </script>
+    <div>内容</div>
+    <div class="one">文字</div>
+    案例1：
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* 所以的标签都可能添加内外边距，内减模式 */
+            box-sizing: border-box;
+        }
+        .news{
+            width: 500px;
+            height: 400px;
+            /* background-color: pink; */
+            border: 1px solid #ccc;
+            margin: 50px auto;
+            /* text-align: center; */
+            padding: 42px 30px 0;
+        }
+        .news h2{
+            font-size: 30px;
+            /* 字号大小倍 */
+            line-height: 1;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 9px;
+        }
+        ul{
+            /* 去掉列表的符号 */
+            list-style: none;
+        }
+        .news li{
+            border-bottom: 1px solid #ccc;
+            padding-left: 28px;
+            line-height: 50px;
+        }
+        .news a{
+            text-decoration: none;
+            font-size: 18px;
+            color: #666666;
+        }
+    </style>
+    <div class="news">
+        <h2>最新文章/New Articles</h2>
+        <ul>
+            <li><a href="#">北京招聘网页设计,平面设计,php</a></li>
+            <li><a href="#">北京招聘网页设计,平面设计,php</a></li>
+            <li><a href="#">北京招聘网页设计,平面设计,php</a></li>
+            <li><a href="#">北京招聘网页设计,平面设计,php</a></li>
+            <li><a href="#">北京招聘网页设计,平面设计,php</a></li>
+        </ul>
+    </div>
+    案例2：
+    <style>
+        .box{
+            height: 40px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+        }
+        .box a{
+            /* 去掉宽 设置内边距 */
+            padding: 0 16px;
+            /* width: 80px; */
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: #4c4c4c;
+            font-size: 12px;
+            
+        }
+        .box a:hover{
+            background-color: #edeef0;
+            color: #ff8400;
+        }
+    </style>
+    <div class="box">
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+    </div>
